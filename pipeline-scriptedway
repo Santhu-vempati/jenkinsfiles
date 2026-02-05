@@ -1,0 +1,22 @@
+node{
+def mavenHome = tool name:maven3.6.2
+stage('CheckOutCode'){
+----------------
+}
+stage('Build'){
+sh "${mavenHome}/bin/mvn clean package"
+}
+stage('ExcutesonarQubeReport'){
+sh "${mavenHome}/bin/mvn clean sonar:sonar"
+}
+stage('UploadArtifactsintoNexus'){
+sh "${mavenHome}/bin/mvn clean deploy"
+}
+stage('DeployappintoTomcatserver'){
+-------------------------------ssh agent token
+sh "scp maven target/--githubreponame.war-- ec2-user@--TCipadd:/opt/apache-tomcat-9.0.53/webapps"
+}
+stage('sendemailNotification'){
+-----------------------paste token
+}
+}//node closing tag
