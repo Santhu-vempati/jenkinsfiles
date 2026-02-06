@@ -1,0 +1,19 @@
+node{
+stage('CheckOutCode'){
+----------------
+}
+stage('Build'){
+sh "npm install"
+}
+stage('ExcutesonarQubeReport'){
+nodejs(nodeJSinstallationName: 'nodejs16.10.0'){     ------if you want to mension the node version use this
+sh "npm run sonar"
+}
+}
+stage('UploadArtifactsintoNexus'){
+sh "npm publish"
+}
+stage('RunNodeJSApp'){
+sh "npm start &"
+}
+}//node closing tag
