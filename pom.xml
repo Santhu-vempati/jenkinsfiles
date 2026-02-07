@@ -4,20 +4,19 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>firstproject</groupId>
-  <artifactId>Nethra</artifactId>
+  <artifactId>milky</artifactId>
   <version>1.0-SNAPSHOT</version>
-<name>Nethra</name>
+<name>milky</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.release>17</maven.compiler.release>
-  </properties>
-<properties>
-    <url>http://3.108.221.143:9000/</url>
-    <username>admin</username>
-    <password>Santhu@1606</password>
+    
+    <sonar.host.url>http://3.108.221.143:9000/</sonar.host.url>
+    <sonar.login>admin</sonar.login>
+    <sonar.password>Santhu@1606</sonar.password>
   </properties>
   
   <dependencyManagement>
