@@ -14,7 +14,12 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.release>17</maven.compiler.release>
   </properties>
-
+<properties>
+    <url>http://3.108.221.143:9000/</url>
+    <username>admin</username>
+    <password>Santhu@1606</password>
+  </properties>
+  
   <dependencyManagement>
     <dependencies>
       <dependency>
